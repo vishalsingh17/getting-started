@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 
 services:
   app:
@@ -11,17 +11,17 @@ services:
       - ./:/app
     environment:
       MYSQL_HOST: mysql
-      MYSQL_USER: root    
+      MYSQL_USER: root
       MYSQL_PASSWORD: secret
       MYSQL_DB: todos
 
   mysql:
     image: mysql:8.0
     volumes:
-      - todos-mysql-data:/var/lib/mysql
+      - todo-mysql-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: todos
 
 volumes:
-  todos-mysql-data:
+  todo-mysql-data:

@@ -55,6 +55,9 @@ function TodoListCard() {
             {items.length === 0 && (
                 <p className="text-center">Welcome User!! You can add your to-do list here..</p>
             )}
+            {items.length === 0 && (
+                <p className="text-center">Made by Vishal</p>
+            )}
             {items.map(item => (
                 <ItemDisplay
                     item={item}
